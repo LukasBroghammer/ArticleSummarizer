@@ -55,7 +55,7 @@ def summarize():
     selected_language.set(detected_language)
     language_var.set(detected_language)
     
-    # Function to remove stop words from a sentence
+   
     def remove_stop_words(sentence, language='english'):
         language = language.lower()
 
@@ -66,7 +66,7 @@ def summarize():
             # Add more language mappings as needed
         }
 
-        # Use the mapped language or default to 'english'
+       
         mapped_language = language_mapping.get(language, 'english')
         stop_words_set = set(stopwords.words(mapped_language))
 
@@ -122,7 +122,7 @@ def summarize():
     
     translate_btn['state'] = 'normal'
 
-# Function to translate
+
 def translate():
 
     global detected_language, article
