@@ -11,4 +11,4 @@ Features:
 
     Translation Option: Translate the article text into different languages for broader accessibility.
 
-    Happy summarizing! 📰🚀
+ Happy summarizing! 📰🚀
