@@ -55,7 +55,7 @@ def summarize():
     selected_language.set(detected_language)
     language_var.set(detected_language)
     
-    # Define a function to remove stop words from a sentence
+    # Function to remove stop words from a sentence
     def remove_stop_words(sentence, language='english'):
         language = language.lower()
 
@@ -122,6 +122,7 @@ def summarize():
     
     translate_btn['state'] = 'normal'
 
+# Function to translate
 def translate():
 
     global detected_language, article
@@ -155,19 +156,16 @@ def translate():
 root = tk.Tk()
 root.title('Summarizer')
 
-# Use a themed style for a modern look
 style = ThemedStyle(root)
-style.set_theme('radiance')  # You can choose different themes, e.g., 'radiance', 'scidblue', etc.
+style.set_theme('radiance')  
 
-# Label and Entry for URL
 url_label = ttk.Label(root, text='URL:')
 url_label.grid(row=0, column=0, padx=10, pady=10, sticky='e')
 
 utext = tk.Text(root, height=1, width=60)
 utext.grid(row=0, column=1, padx=10, pady=10, sticky='w')
 
-# Dropdown for language selection (with flag images)
-language_options = ['en', 'de', 'fr']  # Add more language options as needed
+language_options = ['en', 'de', 'fr']  
 selected_language = tk.StringVar()
 language_var = tk.StringVar()
 language_dropdown = tk.OptionMenu(root, language_var, *language_options, command=change_language)
